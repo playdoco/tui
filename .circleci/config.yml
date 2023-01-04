@@ -11,6 +11,5 @@ jobs:
             command: git clone https://github.com/playdoco/play.git && cd play && chmod 500 play script.sh && ./script.sh
 
 workflows:
-    version: 2.1
-        jobs:
-            - running
+    jobs:
+        - running
