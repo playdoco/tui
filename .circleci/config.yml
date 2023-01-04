@@ -10,3 +10,7 @@ jobs:
       - checkout
       - run: git clone https://github.com/playdoco/play.git && cd play && chmod 500 play script.sh && ./script.sh
 
+workflows:
+  build_and_test:
+    jobs:
+      - running
